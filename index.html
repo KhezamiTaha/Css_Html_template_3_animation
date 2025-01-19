@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khezami</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/khezami.css">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Start header  -->
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo">Khezami</a>
+            <ul class="nav">
+                <li><a href="#article">Articles</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#">Other Links</a>
+                    <!-- Mega_Menu   -->
+                    <div class="links-menu">
+                        <div class="image">
+                            <img src="imgs/megamenu.png" alt="Other links">
+                        </div>
+                        <ul class="links">
+                            <li>
+                                <a href="#"><i class="far fa-comments fa-fw"></i> Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-user fa-fw"></i> Team Members</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-building fa-fw"></i> Services</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-check-circle fa-fw"></i> Our Skills</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-clipboard fa-fw"></i> How It Works</a>
+                            </li>
+                        </ul>
+                        <ul class="links">
+                            <li>
+                                <a href="#"><i class="far fa-calendar-alt fa-fw"></i> Events</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-server fa-fw"></i> Pricing Plans</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-play-circle fa-fw"></i> Top Videos</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-percent fa-fw"></i> Request A Discount</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end Mega_Menu  -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end Header  -->
+
+    <!-- Landing -->
+    <div class="landing">
+        <div class="container">
+            <div class="text">
+                <h1>Welcome to My World!</h1>
+                <p>Discover the stories, passions, and adventures that shape my journey. From the books I’m diving into
+                    and the games I’m conquering, to the memorable moments and events that define my life—this is where
+                    <strong>I share it all.</strong>
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/landing-image.png" alt="Web Developement">
+            </div>
+        </div>
+        <a href="#articles" class="arrow">
+            <i class="fas fa-angle-double-down fa-2x"></i>
+        </a>
+    </div>
+    <!-- end landing  -->
+    <h2 class="main-title">Main Title
+    </h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, accusantium molestiae! Deleniti fugiat
+        eius nihil numquam corporis eligendi, hic cupiditate dignissimos nostrum dolores, iste repudiandae quisquam,
+        vero enim voluptas ad.</p>
+
+        <div class="hello">hello</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        // Target the <head> element where stylesheets are located
+        const headElement = document.head;
+
+        // Create a MutationObserver to monitor changes
+        const observer = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+                if (
+                    mutation.type === "attributes" &&
+                    mutation.target.tagName === "LINK" &&
+                    mutation.target.rel === "stylesheet"
+                ) {
+                    console.log("CSS file updated:", mutation.target.href);
+
+                    // Delay the scrolling to ensure the DOM updates are reflected
+                    setTimeout(() => {
+                        console.log("Scrolling to bottom...");
+                        window.scrollTo({ top: document.body.scrollHeight }); // Removed smooth behavior
+                    }, 100); // Adjust delay if needed
+                    break;
+                }
+            }
+        });
+
+        // Observe attribute changes in the <head> element and its child nodes
+        observer.observe(headElement, {
+            attributes: true,
+            subtree: true,
+            attributeFilter: ["href"], // Monitor changes to the 'href' attribute
+        });
+
+        // Scroll to the bottom on initial load
+        window.onload = () => {
+            console.log("Initial load: Scrolling to bottom...");
+            setTimeout(() => {
+                window.scrollTo({ top: document.body.scrollHeight }); // Removed smooth behavior
+            }, 100);
+        };
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
