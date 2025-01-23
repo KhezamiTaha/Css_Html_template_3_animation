@@ -23,7 +23,7 @@ This is a modern, animated, and responsive website designed and developed using 
 
 
 ## Deployment
-Our project can be viewed here:  [ My animated website](https://khezamitaha.github.io/Kasper-Template_2-HTML-CSS-/)
+Our project can be viewed here:  [ My animated website](https://khezamitaha.github.io/Css_Html_template_3_animation/)
 ## Features
 
 ### 1. **Homepage**
